@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><strong>Zhiwei Han</strong> | 韩志伟 </title>
+  <meta name="description" content="Personal academic homepage: About, News, Selected Publications, Teaching, Projects, All Publications." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Optional: nicer typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --page-max: 980px;
+    }
+    body {
+      font-family: Inter, "Noto Sans SC", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .container-narrow {
+      max-width: var(--page-max);
+    }
+    .nav-link {
+      cursor: pointer;
+    }
+    .hero {
+      padding-top: 1.25rem;
+      padding-bottom: 0.5rem;
+    }
+    .name {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .profile {
+      width: 220px;
+      max-width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: none;
+    }
+    .section-title {
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .pub-item {
+      padding: 1rem 0;
+      border-top: 1px solid rgba(127,127,127,.25);
+    }
+    .pub-item:first-of-type {
+      border-top: 0;
+    }
+    .pub-thumb {
+      width: 110px;
+      height: 72px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .badge-link a {
+      text-decoration: none;
+    }
+    .nav-icon-link {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+
+    .nav-icon-link:hover {
+      opacity: 1;
+    }
+
+    .nav-icon-link i {
+      font-size: 1.35rem;
+      vertical-align: -0.12em;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding: 1.5rem 0 2.5rem;
+      border-top: 1px solid rgba(127,127,127,.25);
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    /* smooth anchor offset for fixed navbar */
+    section {
+      scroll-margin-top: 90px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top navbar -->
+  <nav class="navbar navbar-expand-md sticky-top bg-body border-bottom">
+    <div class="container container-narrow">
+      <a class="navbar-brand fw-semibold" href="#about">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <div class="navbar-brand-icons d-none d-md-inline-flex align-items-center gap-2 ms-2">
+          <!-- <a class="nav-icon-link" href="https://github.com/ZhiweiHan9277/" target="_blank" rel="noopener" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a> -->
+          <a class="nav-icon-link" href="https://www.linkedin.com/in/zhiwei-han-58863b96/" target="_blank" rel="noopener" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a class="nav-icon-link" href="https://scholar.google.com/citations?user=zIj-JSsAAAAJ&hl=de" target="_blank" rel="noopener" title="Google Scholar">
+            <i class="bi bi-mortarboard"></i>
+          </a>
+        </div>
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#selected_publications">Selected Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#all_publications">All Publications</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container container-narrow">
+    <!-- Hero / About -->
+    <section id="about" class="hero">
+      <div class="row align-items-start g-4">
+        <div class="col-12 col-md-8">
+          <h1 class="name mt-3"><strong>Zhiwei Han</strong> | 韩志伟</h1>
+
+          <p class="mt-3">
+            I am a final-year doctoral researcher in Machine Learning at the Technical University of Munich (TUM) and fortiss GmbH, 
+            under the supervision of PD. Dr. Habil. Hao Shen. 
+            <span style="color:red;">I am currently seeking industry research internship opportunities in multi-modal and multi-view learning.</span>
+          </p>
+            
+          <p>
+            My research focuses on <strong>self-supervised multi-view and multi-modal learning</strong>, through the lens of <strong>disentanglement and identifiability</strong>. 
+            In parallel, I am actively involved in multiple federal- and state-funded industry research projects, leading to peer-reviewed publications across diverse application domains. 
+            Before my doctoral research, I earned an M.Sc. in Electrical Engineering and Information Technology at TUM.
+          </p>
+
+          <p>
+            I am particularly interested in applications to <strong>vision–language learning and multimodal data analysis</strong>,
+            where robustness, interpretability, and stable cross-modal alignment are critical.
+          </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <!-- Put profile.jpg next to index.html -->
+          <img class="profile mt-2" src="photo.png" alt="Profile photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section id="news">
+      <h2 class="section-title">News</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2">
+            <div class="fw-semibold">[Ongoing] One paper in preparation for ICML 2026.</div>
+        </li>
+        <li class="mb-2">
+          <div class="fw-semibold">[Oct., 2025] One paper submitted to AISTATS 2026.</div>
+        </li>
+        <li class="mb-2">
+          <div class="fw-semibold">[Sep., 2025] One paper submitted to ICLR 2026.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Selected Publications -->
+    <section id="selected_publications">
+      <h2 class="section-title">Selected Publications</h2>
+
+      <!-- Publications (sorted: new to old) -->
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/provable_affine.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Provable Affine Identifiability of Nonlinear CCA under Latent Distributional Priors
+            </div>
+            <div class="text-body-secondary">
+              <strong>Zhiwei Han</strong>, Stefan Matthes, Hao Shen
+            </div>
+            <div class="text-body-secondary">
+              arXiv preprint, 2025 · Under review at AISTATS 2026
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                In this work, we establish conditions under which nonlinear CCA recovers the ground-truth latent factors up to an orthogonal transform after whitening. Building on the classical result that linear mappings maximize canonical correlations under Gaussian priors, we prove affine identifiability for a broad class of latent distributions in the population setting. Central to our proof is a reparameterization result that transports the analysis from observation space to source space, where identifiability becomes tractable. We further show that whitening is essential for ensuring boundedness and well-conditioning, thereby underpinning identifiability. Beyond the population setting, we prove that ridge-regularized empirical CCA converges to its population counterpart, transferring these guarantees to the finite-sample regime. Experiments on a controlled synthetic dataset and a rendered image dataset validate our theory and demonstrate the necessity of its assumptions through systematic ablations.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="https://arxiv.org/abs/2510.04758" target="_blank" rel="noopener">Paper</a>
+              </span>
+
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Code available after review</a>
+              </span>
+              <!-- <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Website</a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/paper.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Mechanistic Independence: A Principle for Identifiable Disentangled Representations
+            </div>
+            <div class="text-body-secondary">
+              Stefan Matthes, <strong>Zhiwei Han</strong>, Hao Shen
+            </div>
+            <div class="text-body-secondary">
+              arXiv preprint, 2025 · Under review at ICLR 2026
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Disentangled representations seek to recover latent factors of variation underlying observed data, yet their identifiability is still not fully understood. We introduce a unified framework in which disentanglement is achieved through mechanistic independence, which characterizes latent factors by how they act on observed variables rather than by their latent distribution. This perspective is invariant to changes of the latent density, even when such changes induce statistical dependencies among factors. Within this framework, we propose several related independence criteria -- ranging from support-based and sparsity-based to higher-order conditions -- and show that each yields identifiability of latent subspaces, even under nonlinear, non-invertible mixing. We further establish a hierarchy among these criteria and provide a graph-theoretic characterization of latent subspaces as connected components. Together, these results clarify the conditions under which disentangled representations can be identified without relying on statistical assumptions.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="https://arxiv.org/abs/2509.22196" target="_blank" rel="noopener">Paper</a>
+              </span>
+
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Code available after review</a>
+              </span>
+              <!-- <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Website</a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/towards_a.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Towards a Unified Framework of Contrastive Learning for Disentangled Representations
+            </div>
+            <div class="text-body-secondary">
+              Stefan Matthes, <strong>Zhiwei Han</strong>, Hao Shen
+            </div>
+            <div class="text-body-secondary">
+              Advances in Neural Information Processing Systems (NeurIPS), 2023
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Contrastive learning has recently emerged as a promising approach for learning data representations that discover and disentangle the explanatory factors of the data. Previous analyses of such approaches have largely focused on individual contrastive losses, such as noise-contrastive estimation (NCE) and InfoNCE, and rely on specific assumptions about the data generating process. This paper extends the theoretical guarantees for disentanglement to a broader family of contrastive methods, while also relaxing the assumptions about the data distribution. Specifically, we prove identifiability of the true latents for four contrastive losses studied in this paper, without imposing common independence assumptions. The theoretical findings are validated on several benchmark datasets. Finally, practical limitations of these methods are also investigated.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="https://openreview.net/pdf?id=QrB38MAAEP" target="_blank" rel="noopener">Paper</a>
+              </span>
+
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="https://openreview.net/forum?id=QrB38MAAEP&referrer=%5Bthe%20profile%20of%20Zhiwei%20Han%5D(%2Fprofile%3Fid%3D~Zhiwei_Han1)" target="_blank" rel="noopener">Code</a>
+              </span>
+              <!-- <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Website</a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/symmetry_object.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Symmetry-based Learning of Radiance Fields for Rigid Objects
+            </div>
+            <div class="text-body-secondary">
+              <strong>Zhiwei Han</strong>, Stefan Matthes, Hao Shen, Yuanting Liu
+            </div>
+            <div class="text-body-secondary">
+              NeurIPS 2023 Workshop on Symmetry and Geometry in Neural Representations
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                In this work, we present SymObjectRF, a symmetry-based method that learns object-centric representations for rigid objects from one dynamic scene without hand-crafted annotations. SymObjectRF learns the appearance and surface geometry of all dynamic object in their canonical poses and represents individual object within its canonical pose using a canonical object field (COF). SymObjectRF imposes group equivariance on rendering pipeline by transforming 3D point samples from world coordinate to object canonical poses. Subsequently, a permutation-invariant compositional renderer combines the color and density values queried from the learned COFs and reconstructs the input scene via volume rendering. SymObjectRF is then optimized by minimizing scene reconstruction loss. We show the feasibility of SymObjectRF in learning object-centric representations both theoretically and empirically.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="https://openreview.net/pdf?id=NWyf3wb330" target="_blank" rel="noopener">Paper</a>
+              </span>
+
+              <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Code soon available</a>
+              </span>
+              <!-- <span class="badge text-bg-secondary">
+                <a class="text-white" href="#" target="_blank" rel="noopener">Website</a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/draw_with.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Draw with Me: Human-in-the-Loop for Image Restoration
+            </div>
+            <div class="text-body-secondary">
+              Thomas Weber, Heinrich Hußmann, <strong>Zhiwei Han</strong>, Stefan Matthes, Yuanting Liu
+            </div>
+            <div class="text-body-secondary">
+              ACM IUI, 2020
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                The purpose of image restoration is to recover the original state of damaged images. To overcome the disadvantages of the traditional, manual image restoration process, like the high time consumption and required domain knowledge, automatic inpainting methods have been developed. These methods, however, can have limitations for complex images and may require a lot of input data. To mitigate those, we present "interactive Deep Image Prior", a combination of manual and automated, Deep-Image-Prior-based restoration in the form of an interactive process with the human in the loop. In this process a human can iteratively embed knowledge to provide guidance and control for the automated inpainting process. For this purpose, we extended Deep Image Prior with a user interface which we subsequently analyzed in a user study. Our key question is whether the interactivity increases the restoration quality subjectively and objectively. Secondarily, we were also interested in how such a collaborative system is perceived by users.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://www.medien.ifi.lmu.de/pubdb/publications/pub/weber2020iui/weber2020iui.pdf" target="_blank">Paper</a></span>
+              <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank">Code soon available</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/on_leveraging.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              On Leveraging the Metapath and Entity Aware Subgraphs for Recommendation
+            </div>
+            <div class="text-body-secondary">
+              Muhammad Umer Anwaar, <strong>Zhiwei Han</strong>, Shyam Arumugaswamy et al.
+            </div>
+            <div class="text-body-secondary">
+              MCFR@MM Workshop, 2022
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Due to the shallow structure, classic graph neural networks (GNNs) failed in modelling high-order graph structures that deliver critical insights of task relevant relations. The negligence of those insights lead to insufficient distillation of collaborative signals in recommender systems. In this paper, we propose PEAGNN, a unified GNN framework tailored for recommendation tasks, which is capable of exploiting the rich semantics in metapaths. PEAGNN trains multilayer GNNs to perform metapath-aware information aggregation on collaborative subgraphs, $h$-hop subgraphs around the target user-item pairs. After the attentive fusion of aggregated information from different metapaths, a graph-level representation is then extracted for matching score prediction. To leverage the local structure of collaborative subgraphs, we present entity-awareness that regularizes node embedding with the presence of features in a contrastive manner. Moreover, PEAGNN is compatible with the mainstream GNN structures such as GCN, GAT and GraphSage. The empirical analysis on three public datasets demonstrate that our model outperforms or is at least on par with other competitive baselines. Further analysis indicates that trained PEAGNN automatically derives meaningful metapath combinations from the given metapaths.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://dl.acm.org/doi/10.1145/3552468.3555361 target="_blank">Paper</a></span>
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://github.com/blindsubmission1/PEAGNN" target="_blank">Code</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+      <h2 class="section-title">Teaching</h2>
+
+      <ul class="list-unstyled">
+        <li class="mb-2">
+          <div class="fw-semibold">Applied Reinforcement Learning (Winter Semester, 2022-2023)</div>
+          <div class="text-body-secondary">
+            Role: Teaching Assistant (TA) · Chair of Data Processing · Technical University of Munich (TUM)
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="exp-item mb-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2">
+            <div class="fw-semibold">
+              BEST (BMWK) — Blockchain-based decentralized energy market design and management
+            </div>
+            <div class="text-body-secondary">2021 – 2024</div>
+          </div>
+          <ul class="text-body-secondary mt-2 mb-0">
+            <li><span class="fw-semibold">Role &amp; outcomes:</span> Project and technical lead; delivered the project and published two peer-reviewed conference papers, including one <span class="fw-semibold">Best Paper Award</span> (FES 2023).</li>
+            <li><span class="fw-semibold">Leadership:</span> Led and coordinated a three-person research team across problem formulation, system design, and experimental validation.</li>
+            <li><span class="fw-semibold">Research contribution:</span> Designed and evaluated a battery scheduling algorithm leveraging household load forecasting and electricity market price prediction.</li>
+            <li><span class="fw-semibold">System contribution:</span> Developed a preference-aware peer-to-peer energy trading platform, integrating user preferences into decentralized market mechanisms.</li>
+          </ul>
+        </div>
+      
+        <div class="exp-item mb-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2">
+            <div class="fw-semibold">
+              RobustKI — Robust and trustworthy AI under limited supervision
+            </div>
+            <div class="text-body-secondary">2019 – 2023</div>
+          </div>
+          <ul class="text-body-secondary mt-2 mb-0">
+            <li><span class="fw-semibold">Role &amp; outcomes:</span> Co-lead researcher and technical contributor; two papers accepted at peer-reviewed NeurIPS and ICML workshops.</li>
+            <li><span class="fw-semibold">Research contribution:</span> Developed a few-shot stress detection framework based on self-supervised learned representations.</li>
+            <li><span class="fw-semibold">Research contribution:</span> Proposed and implemented a symmetry-constrained object-centric NeRF framework for 3D object-centric learning.</li>
+          </ul>
+        </div>
+      
+        <div class="exp-item mb-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2">
+            <div class="fw-semibold">
+              WoWNet (IUK) — Representation learning and information extraction from heterogeneous data
+            </div>
+            <div class="text-body-secondary">2019 – 2022</div>
+          </div>
+          <ul class="text-body-secondary mt-2 mb-0">
+            <li><span class="fw-semibold">Role &amp; outcomes:</span> Technical contributor; two papers accepted at peer-reviewed venues.</li>
+            <li><span class="fw-semibold">Research contribution:</span> Designed and evaluated a knowledge-augmented graph recommender system to mitigate cold-start by integrating structured side information.</li>
+            <li><span class="fw-semibold">Research contribution:</span> Implemented and evaluated a VAE-based unsupervised node representation learning approach to learn informative embeddings under sparse supervision.</li>
+          </ul>
+        </div>
+      
+        <div class="exp-item">
+          <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2">
+            <div class="fw-semibold">
+              MAGNET — A personalized, adaptive and intuitive IDE
+            </div>
+            <div class="text-body-secondary">2018 – 2019</div>
+          </div>
+          <ul class="text-body-secondary mt-2 mb-0">
+            <li><span class="fw-semibold">Role &amp; outcomes:</span> Technical contributor; one paper accepted at UMAP 2018.</li>
+            <li><span class="fw-semibold">Research contribution:</span> Built a proof of concept for AI-based IDE user preference prediction on AUTOFOKUS 3, combining behavioral signals with learned user representations.</li>
+          </ul>
+        </div>
+    </section>
+
+    <!-- All Publications -->
+    <section id="all_publications">
+      <h2 class="section-title">All Publications</h2>
+
+      <!-- Additional publications (not in the previous list) — sorted: new to old -->
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/decentralized_optimal.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Decentralized Optimal Scheduler for Prosumers in a Local Electric Energy Market
+            </div>
+            <div class="text-body-secondary">
+              Godwin C. Okwuibe, Armin Wolf, <strong>Zhiwei Han</strong>
+            </div>
+            <div class="text-body-secondary">
+              IEEE SGEI, 2024
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Local energy markets (LEMs) provide an opportunity for prosumers to exchange their energy at the local grid level. Despite various studies on LEMs and their use in decentralizing the traditional top-down approach of electricity grids, there is still a lack of effective coordination and scheduling methods for energy trading. The concepts still lack ideas as regards how to effectively coordinate the markets and schedule the local devices for proper energy trading. In this work, we propose an open-source optimal scheduling model to enable local prosumers to effectively coordinate their devices for local energy trading. The proposed model was evaluated for its applicability in a German use case scenario. The simulation results show that the model can create a community self-sufficiency of up to 82% if properly coordinated and provide additional economic benefits to the local prosumers.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://ieeexplore.ieee.org/document/10914128" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/pooling_platform.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Pooling platform: A decentralized local energy market platform based on clustered prosumer’s preferences
+            </div>
+            <div class="text-body-secondary">
+              Godwin C. Okwuibe, Ksenia Vinogradova, Sören Klingner, <strong>Zhiwei Han</strong>
+            </div>
+            <div class="text-body-secondary">
+              IEEE Future Energy Solutions (FES), 2023
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Local energy markets (LEMs) have been introduced in the last few decades as a bottom-up approach solution to create a competitive market for prosumers/consumers to trade their energy and have control over their energy sources. However, there is still a gap in research for prosumers/consumers willing to exchange energy at defined price-and energy-preferences. In this work, we propose an open-source LEM model for matching prosumers and consumers with the same energy and price policy in a decentralized LEM. Our model was verified of its applicability by simulating it with the data from a German community. The simulation results showed that the model was able to satisfy the energy preferences of the consumers and prosumers in the local community to an average of more than 60%. Moreover, the model also demonstrated improved performance in terms of self-sufficiency and self-consumption ratio to the community compared to trading with the central LEM.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://ieeexplore.ieee.org/document/10182867" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/connected_vehicle.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Connected vehicle simulation framework for parking occupancy prediction (demo paper)
+            </div>
+            <div class="text-body-secondary">
+              Pierpaolo Resce, Lukas Vorwerk, <strong>Zhiwei Han</strong>, Giuliano Cornacchia, Omid Isfahani Alamdari, Mirco Nanni, Luca Pappalardo, Daniel Weimer, Yuanting Liu
+            </div>
+            <div class="text-body-secondary">
+              ACM SIGSPATIAL / GIS, 2022 (Demo Paper)
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                This paper demonstrates a simulation framework that collects data about connected vehicles' locations and surroundings in a realistic traffic scenario. Our focus lies on the capability to detect parking spots and their occupancy status. We use this data to train machine learning models that predict parking occupancy levels of specific areas in the city center of San Francisco. By comparing their performance to a given ground truth, our results show that it is possible to use simulated connected vehicle data as a base for prototyping meaningful AI-based applications.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://dl.acm.org/doi/10.1145/3557915.3560995" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/paper.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Unsupervised learning of joint embeddings for node representation and community detection
+            </div>
+            <div class="text-body-secondary">
+              Rayyan Ahmad Khan, Muhammad Umer Anwaar, Omran Kaddah, <strong>Zhiwei Han</strong>, Martin Kleinsteuber
+            </div>
+            <div class="text-body-secondary">
+              ECML-PKDD, 2021 (Springer)
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                In graph analysis community detection and node representation learning are two highly correlated tasks. In this work, we propose an efficient generative model called J-ENC for learning Joint Embedding for Node representation and Community detection. J-ENC learns a community-aware node representation, i.e., learning of the node embeddings are constrained in such a way that connected nodes are not only “closer” to each other but also share similar community assignments. This joint learning framework leverages community-aware node embeddings for better performance on these tasks: node classification, overlapping community detection and non-overlapping community detection. We demonstrate on several graph datasets that J-ENC effectively outperforms many competitive baselines on these tasks. Furthermore, we show that J-ENC not only has quite robust performance with varying hyperparameters but also is computationally efficient than its competitors.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://dl.acm.org/doi/10.1007/978-3-030-86520-7_2" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/firefighter_virtual.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Firefighter virtual reality simulation for personalized stress detection
+            </div>
+            <div class="text-body-secondary">
+              Sören Klingner, <strong>Zhiwei Han</strong>, Yuanting Liu, Fan Fan, Bashar Altakrouri, Bruno Michel, Jonas R. M. Weiss, Arvind Sridhar, Sophie Mai Chau
+            </div>
+            <div class="text-body-secondary">
+              German Conference on Artificial Intelligence (KI), 2020 (Demo/Poster)
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Classifying stress in firefighters poses challenges, such as accurate personalized labeling, unobtrusive recording, and training of adequate models. Acquisition of labeled data and verification in cage mazes or during hot trainings is time consuming. Virtual Reality (VR) and Internet of Things (IoT) wearables provide new opportunities to create better stressors for firefighter missions through an immersive simulation. In this demo, we present a VR-based setup that enables to simulate firefighter missions to trigger and more easily record specific stress levels. The goal is to create labeled datasets for personalized multilevel stress detection models that include multiple biosignals, such as heart rate variability from electrocardiographic RR intervals. The multi-level stress setups can be configured, consisting of different levels of mental stressors. The demo shows how we established the recording of a baseline and virtual missions with varying challenge levels to create a personalized stress calibration.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://ki2020.uni-bamberg.de/conference/posters/poster_72.pdf" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/personalized_stress.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Personalized stress detection with self-supervised learned features
+            </div>
+            <div class="text-body-secondary">
+              Stefan Matthes, <strong>Zhiwei Han</strong>, Tianming Qiu, Bruno Michel, Sören Klingner, Hao Shen, Yuanting Liu, Bashar Altakrouri
+            </div>
+            <div class="text-body-secondary">
+              ICML 2020 Workshop on Human-centric Learning
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Automated stress detection using physiological 
+sensors is challenging due to inaccurate labeling 
+and individual bias in the sensor data. Previous 
+methods consider stress detection as a supervised 
+classiﬁcation task, where bad labeling leads to a 
+large performance drop. Furthermore, the poor 
+generalizability to unseen subjects reveals the 
+importance of personalizing stress detection for 
+both inter- and intra-individual sensor data vari- 
+ability. Towards this end we present a label-free 
+feature extractor and an efﬁcient personalization 
+method with the ”human in the loop” approach. 
+First, we capture the intra-individual variability 
+and encode it in self-supervised learned features, 
+which are usually well separable and independent 
+of noisy stress labels. Next, personalization is 
+achieved by assigning labels to critical reference 
+points via very few interactions between subject 
+and wearable device. The promising results of 
+the conducted experiments show the effectiveness 
+and efﬁciency of our proposed method. 
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://www.academia.edu/70136037/Personalized_Stress_Detection_with_Self_supervised_Learned_Features#:~:text=Self%2Dsupervised%20learned%20features%20improve,real%2Dtime%20stress%20detection%20accuracy." target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/interactive_image.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Interactive Image Restoration
+            </div>
+            <div class="text-body-secondary">
+              <strong>Zhiwei Han</strong>, Thomas Weber, Stefan Matthes, Yuanting Liu, Hao Shen
+            </div>
+            <div class="text-body-secondary">
+              NeurIPS 2019 Workshop on Human-centric Learning
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Machine learning and many of its applications are considered hard to approach due to their complexity and lack of transparency. One mission of human-centric machine learning is to improve algorithm transparency and user satisfaction while ensuring an acceptable task accuracy. In this work, we present an interactive image restoration framework, which exploits both image prior and human painting knowledge in an iterative manner such that they can boost on each other. Additionally, in this system users can repeatedly get feedback of their interactions from the restoration progress. This informs the users about their impact on the restoration results, which leads to better sense of control, which can lead to greater trust and approachability. The positive results of both objective and subjective evaluation indicate that, our interactive approach positively contributes to the approachability of restoration algorithms in terms of algorithm performance and user experience.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://arxiv.org/pdf/1910.11059" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pub-item">
+        <div class="row g-3 align-items-start">
+          <div class="col-auto">
+            <img class="pub-thumb" src="pub_thumb/real_personalized.png" alt="Publication thumbnail">
+          </div>
+          <div class="col">
+            <div class="fw-semibold">
+              Real-time personalization in adaptive IDEs
+            </div>
+            <div class="text-body-secondary">
+              Matthias Schmidmaier, <strong>Zhiwei Han</strong>, Thomas Weber, Yuanting Liu, Heinrich Hußmann
+            </div>
+            <div class="text-body-secondary">
+              UMAP Adjunct, 2019
+            </div>
+      
+            <details class="mt-2">
+              <summary class="text-body-secondary">Abstract</summary>
+              <p class="text-body-secondary mt-2 mb-0">
+                Integrated Development Environments (IDEs) are used for a varietyof software development tasks. Their complexity makes them chal-lenging to use though, especially for less experienced developers. In this paper, we outline our approach for an user-adaptive IDE that is able to track the interactions, recognize the user's intent and expertise, and provide relevant, personalized recommendations in real-time. To obtain a user model and provide recommendations, interaction data is processed in a two-stage process: first, we derive a bandit based global model of general task patterns from a dataset of labeled interactions. Second, when the user is working with the IDE, we apply a pre-trained classifier in real-time to get task labels from the user's interactions. With those and user feedback we fine-tune a local copy of the global model. As a result, we obtain a personalized user model which provides user-specific recommendations. We finally present various approaches for using these recommendations to adapt the IDE's interface. Modifications range from visual highlighting to task automation, including explanatory feedback.
+              </p>
+            </details>
+      
+            <div class="mt-2 d-flex flex-wrap gap-2 badge-link">
+              <span class="badge text-bg-secondary"><a class="text-white" href="https://www.medien.ifi.lmu.de/pubdb/publications/pub/schmidmaier2019umap-lbw/schmidmaier2019umap-lbw.pdf" target="_blank" rel="noopener">Paper</a></span>
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Code</a></span> -->
+              <!-- <span class="badge text-bg-secondary"><a class="text-white" href="#" target="_blank" rel="noopener">Website</a></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <div>
+        © <span id="year"></span> <strong>Zhiwei Han</strong>. Hosted on GitHub Pages.
+      </div>
+      <div class="text-body-secondary">
+        Single-file HTML template inspired by academic homepages (navbar + sections). No build system required.
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // close mobile nav after clicking a link
+    document.querySelectorAll('.navbar a.nav-link').forEach(a => {
+      a.addEventListener('click', () => {
+        const menu = document.getElementById('navMenu');
+        if (menu.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
